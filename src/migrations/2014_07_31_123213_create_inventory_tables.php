@@ -25,7 +25,7 @@ class CreateInventoryTables extends Migration
                 ->onUpdate('restrict')
                 ->onDelete('set null');
 
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('user_id')->references('id')->on(config('inventory.user_table'))
                 ->onUpdate('restrict')
                 ->onDelete('set null');
 
@@ -53,7 +53,7 @@ class CreateInventoryTables extends Migration
              */
             $table->unique(['inventory_id', 'location_id']);
 
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('user_id')->references('id')->on(config('inventory.user_table'))
                 ->onUpdate('restrict')
                 ->onDelete('set null');
 
@@ -82,7 +82,7 @@ class CreateInventoryTables extends Migration
                 ->onUpdate('restrict')
                 ->onDelete('cascade');
 
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('user_id')->references('id')->on(config('inventory.user_table'))
                 ->onUpdate('restrict')
                 ->onDelete('set null');
         });

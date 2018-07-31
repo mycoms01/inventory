@@ -18,7 +18,7 @@ class CreateMetricsTable extends Migration
             $table->string('name');
             $table->string('symbol');
 
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('user_id')->references('id')->on(config('inventory.user_table'))
                 ->onUpdate('restrict')
                 ->onDelete('set null');
         });

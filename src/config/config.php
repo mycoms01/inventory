@@ -63,5 +63,6 @@ return [
      * @var string
      */
     'sku_separator' => '',
+    'user_table'=>'members'
 
 ];
