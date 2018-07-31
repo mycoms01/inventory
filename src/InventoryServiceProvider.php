@@ -48,7 +48,7 @@ class InventoryServiceProvider extends ServiceProvider
          * If the package method exists, we're using Laravel 4, if not, we're on 5
          */
         if (method_exists($this, 'package')) {
-            $this->package('mycoms01/inventory', 'mycoms01/inventory', __DIR__.'/..');
+            $this->package('stevebauman/inventory', 'stevebauman/inventory', __DIR__.'/..');
         } else {
             /*
              * Set the proper configuration separator since

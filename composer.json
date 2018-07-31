@@ -1,5 +1,5 @@
 {
-    "name": "mycoms01/inventory",
+    "name": "Stevebauman/inventory",
     "description": "Inventory management using Laravel 4 / 5",
     "keywords": ["laravel", "inventory", "inventory-management"],
     "authors": [
@@ -24,13 +24,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Mycoms01\\Inventory\\": "src/"
+            "Stevebauman\\Inventory\\": "src/"
         }
     },
     "autoload-dev":
     {
         "psr-4": {
-          "Mycoms01\\Inventory\\Tests\\": "tests/"
+          "Stevebauman\\Inventory\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable"
