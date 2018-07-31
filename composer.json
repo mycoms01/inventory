@@ -24,13 +24,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Stevebauman\\Inventory\\": "src/"
+            "Mycoms01\\Inventory\\": "src/"
         }
     },
     "autoload-dev":
     {
         "psr-4": {
-          "Stevebauman\\Inventory\\Tests\\": "tests/"
+          "Mycoms01\\Inventory\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable"
