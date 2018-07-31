@@ -1,11 +1,11 @@
 {
-    "name": "stevebauman/inventory",
+    "name": "mycoms01/inventory",
     "description": "Inventory management using Laravel 4 / 5",
     "keywords": ["laravel", "inventory", "inventory-management"],
     "authors": [
         {
-            "name": "Steve Bauman",
-            "email": "steven_bauman@outlook.com"
+            "name": "",
+            "email": ""
         }
     ],
     "license": "MIT",
