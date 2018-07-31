@@ -45,6 +45,8 @@ trait UserIdentificationTrait
                 }
             }
         } catch (\Exception $e) {
+            dd($e);
+
         }
 
         /*

@@ -6,6 +6,7 @@ use Stevebauman\Inventory\Traits\AssemblyTrait;
 use Stevebauman\Inventory\Traits\InventoryVariantTrait;
 use Stevebauman\Inventory\Traits\InventoryTrait;
 
+
 /**
  * Class Inventory.
  */
