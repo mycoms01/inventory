@@ -1386,7 +1386,7 @@ trait InventoryTransactionTrait
      */
     private function getTransactionReason($key)
     {
-        $reason = Lang::get('inventory::reasons.transactions.'.$key, ['id' => $this->getKey(), 'date' => date('Y-m-d H:i:s')]);
+        $reason = Lang::get('inventory.reasons.transactions.'.$key, ['id' => $this->getKey(), 'date' => date('Y-m-d H:i:s')]);
 
         /*
          * Make sure we set the reason to null if no translation is found

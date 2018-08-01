@@ -245,7 +245,7 @@ trait InventoryTrait
              * We want to make sure stock doesn't exist on the specified location already
              */
             if ($this->getStockFromLocation($location)) {
-                $message = Lang::get('inventory::exceptions.StockAlreadyExistsException', [
+                $message = Lang::get('inventory.exceptions.StockAlreadyExistsException', [
                     'location' => $location->name,
                 ]);
 
@@ -299,7 +299,7 @@ trait InventoryTrait
              * We want to make sure stock doesn't exist on the specified location already
              */
             if ($this->getStockFromLocation($location)) {
-                $message = Lang::get('inventory::exceptions.StockAlreadyExistsException', [
+                $message = Lang::get('inventory.exceptions.StockAlreadyExistsException', [
                     'location' => $location->name,
                 ]);
 
@@ -527,7 +527,7 @@ trait InventoryTrait
         if ($stock) {
             return $stock;
         } else {
-            $message = Lang::get('inventory::exceptions.StockNotFoundException', [
+            $message = Lang::get('inventory.exceptions.StockNotFoundException', [
                 'location' => $location->name,
             ]);
 
@@ -707,7 +707,7 @@ trait InventoryTrait
              * we'll thrown an exception
              */
             if (!$overwrite) {
-                $message = Lang::get('inventory::exceptions.SkuAlreadyExistsException');
+                $message = Lang::get('inventory.exceptions.SkuAlreadyExistsException');
 
                 throw new SkuAlreadyExistsException($message);
             }
@@ -851,7 +851,7 @@ trait InventoryTrait
         } elseif ($this->isModel($supplier)) {
             return $supplier;
         } else {
-            $message = Lang::get('inventory::exceptions.InvalidSupplierException', [
+            $message = Lang::get('inventory.exceptions.InvalidSupplierException', [
                 'supplier' => $supplier,
             ]);
 

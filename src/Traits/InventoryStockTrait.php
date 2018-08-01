@@ -2,6 +2,7 @@
 
 namespace Stevebauman\Inventory\Traits;
 
+use Illuminate\Support\Facades\Log;
 use Stevebauman\Inventory\InventoryServiceProvider;
 use Stevebauman\Inventory\Exceptions\NotEnoughStockException;
 use Stevebauman\Inventory\Exceptions\InvalidMovementException;
@@ -99,7 +100,7 @@ trait InventoryStockTrait
              * let's retrieve the default first entry reason
              */
             if (!$model->reason) {
-                $model->reason = Lang::get('inventory::reasons.first_record');
+                $model->reason = Lang::get('inventory.reasons.first_record');
             }
         });
 
@@ -118,7 +119,7 @@ trait InventoryStockTrait
              * Check if a reason has been set, if not let's retrieve the default change reason
              */
             if (!$model->reason) {
-                $model->reason = Lang::get('inventory::reasons.change');
+                $model->reason = Lang::get('inventory.reasons.change');
             }
         });
 
@@ -311,7 +312,7 @@ trait InventoryStockTrait
             return true;
         }
 
-        $message = Lang::get('inventory::exceptions.NotEnoughStockException', [
+        $message = Lang::get('inventory.exceptions.NotEnoughStockException', [
             'quantity' => $quantity,
             'available' => $this->quantity,
         ]);
@@ -352,7 +353,7 @@ trait InventoryStockTrait
         } elseif (is_numeric($movement)) {
             return $this->getMovementById($movement);
         } else {
-            $message = Lang::get('inventory::exceptions.InvalidMovementException', [
+            $message = Lang::get('inventory.exceptions.InvalidMovementException', [
                 'movement' => $movement,
             ]);
 
@@ -437,7 +438,6 @@ trait InventoryStockTrait
         if ($left == $this->quantity && !$this->allowDuplicateMovementsEnabled()) {
             return $this;
         }
-
         $this->quantity = $left;
 
         $this->setReason($reason);
@@ -558,7 +558,7 @@ trait InventoryStockTrait
 
         $this->quantity = $movement->before;
 
-        $reason = Lang::get('inventory::reasons.rollback', [
+        $reason = Lang::get('inventory.reasons.rollback', [
             'id' => $movement->getOriginal('id'),
             'date' => $movement->getOriginal('created_at'),
         ]);

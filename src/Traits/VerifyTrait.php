@@ -26,7 +26,7 @@ trait VerifyTrait
             return true;
         }
 
-        $message = Lang::get('inventory::exceptions.InvalidQuantityException', [
+        $message = Lang::get('inventory.exceptions.InvalidQuantityException', [
             'quantity' => $quantity,
         ]);
 

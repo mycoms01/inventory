@@ -74,6 +74,10 @@ class InventoryServiceProvider extends ServiceProvider
                 __DIR__.'/config/config.php' => config_path('inventory.php'),
             ], 'config');
 
+            $this->publishes([
+                __DIR__.'/lang/' => base_path('resources/lang/'),
+            ], 'lang');
+
             /*
              * Assign the migrations as publishable, and tag it as 'migrations'
              */

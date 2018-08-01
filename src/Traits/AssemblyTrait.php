@@ -17,7 +17,7 @@ trait AssemblyTrait
      *
      * @var string
      */
-    protected $assemblyCacheKey = 'inventory::assembly.';
+    protected $assemblyCacheKey = 'inventory.assembly.';
 
     /**
      * The hasMany assemblies relationship.

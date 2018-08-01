@@ -34,6 +34,7 @@ trait UserIdentificationTrait
         /*
          * Accountability is enabled, let's try and retrieve the current users ID
          */
+
         try {
             if (class_exists($class = '\Cartalyst\Sentry\Facades\Laravel\Sentry') || class_exists($class = '\Cartalyst\Sentinel\Laravel\Facades\Sentinel')) {
                 if ($class::check()) {
@@ -45,14 +46,14 @@ trait UserIdentificationTrait
                 }
             }
         } catch (\Exception $e) {
-            dd($e);
+
 
         }
 
         /*
          * Couldn't get the current logged in users ID, throw exception
          */
-        $message = Lang::get('inventory::exceptions.NoUserLoggedInException');
+        $message = Lang::get('inventory.exceptions.NoUserLoggedInException');
 
         throw new NoUserLoggedInException($message);
     }
